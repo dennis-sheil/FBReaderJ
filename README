@@ -1,5 +1,8 @@
-This is simply the current git master of FBReaderJ (as of midnight, the 
-23rd of April, 2012), plus three more files that translate FBReaderJ 
+This branch was fully merged on the 1st of May, 2012 into the master it 
+forked from, so it is of little use on its own since that merger,
+
+This branch is a fork of the git master of FBReaderJ (as of midnight, 
+the 23rd of April, 2012), plus three more files that translate FBReaderJ 
 into the Portuguese language.
 
 The translation from English to Portuguese was done by 

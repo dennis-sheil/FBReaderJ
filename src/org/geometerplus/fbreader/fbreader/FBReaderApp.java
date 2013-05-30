@@ -72,26 +72,24 @@ public final class FBReaderApp extends ZLApplication {
 	public final ZLIntegerRangeOption TopMarginOption;
 	public final ZLIntegerRangeOption BottomMarginOption;
 	public final ZLIntegerRangeOption SpaceBetweenColumnsOption;
+	public final ZLIntegerRangeOption FooterHeightOption;
 	{
 		final int dpi = ZLibrary.Instance().getDisplayDPI();
 		final int x = ZLibrary.Instance().getPixelWidth();
 		final int y = ZLibrary.Instance().getPixelHeight();
-		TwoColumnViewOption = new ZLBooleanOption(
-			"Options", "TwoColumnView",
-			x * x + y * y >= 50 * dpi * dpi
-		);
 		final int horMargin = Math.min(dpi / 5, Math.min(x, y) / 30);
+
+		TwoColumnViewOption = new ZLBooleanOption("Options", "TwoColumnView", x * x + y * y >= 50 * dpi * dpi);
 		LeftMarginOption = new ZLIntegerRangeOption("Options", "LeftMargin", 0, 100, horMargin);
 		RightMarginOption = new ZLIntegerRangeOption("Options", "RightMargin", 0, 100, horMargin);
 		TopMarginOption = new ZLIntegerRangeOption("Options", "TopMargin", 0, 100, 0);
 		BottomMarginOption = new ZLIntegerRangeOption("Options", "BottomMargin", 0, 100, 4);
 		SpaceBetweenColumnsOption = new ZLIntegerRangeOption("Options", "SpaceBetweenColumns", 0, 300, 3 * horMargin);
+		FooterHeightOption = new ZLIntegerRangeOption("Options", "FooterHeight", 8, dpi / 8, dpi / 20);
 	}
 
 	public final ZLIntegerRangeOption ScrollbarTypeOption =
 		new ZLIntegerRangeOption("Options", "ScrollbarType", 0, 3, FBView.SCROLLBAR_SHOW_AS_FOOTER);
-	public final ZLIntegerRangeOption FooterHeightOption =
-		new ZLIntegerRangeOption("Options", "FooterHeight", 8, 20, 9);
 	public final ZLBooleanOption FooterShowTOCMarksOption =
 		new ZLBooleanOption("Options", "FooterShowTOCMarks", true);
 	public final ZLBooleanOption FooterShowClockOption =
